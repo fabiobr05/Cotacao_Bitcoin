@@ -15,6 +15,9 @@ from tqdm import tqdm
 
 # receber numero de dados que deseja armazenar
 numero_dados = int(input('Insira o numero de linhas que deseja: '))
+# Contabilizar o tempo de execuçao do programa
+# tempo inicial
+inicio = time.time()
 # Inicializar lista
 dados = [[0]*2 for i in range(numero_dados)]
 # Inserir na primeira linha o rotulo das colunas
@@ -63,5 +66,7 @@ matplotlib.pyplot.ylabel('Cotação $')
 matplotlib.pyplot.plot(x, y)
 matplotlib.pyplot.show()
 
-
+# Contabilizar o tempo
+fim = time.time()
+print(f'O tempo de execuçao foi de {fim - inicio} segundos')
 
